@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+//登录
+Route::get('/login','PracticaController@login');
+Route::post('/logindo','PracticaController@logindo')->middleware('Num');
+Route::post('/show','PracticaController@show');
+//退出
+Route::get('/logout','PracticaController@logout');
+//cdn img
+Route::get('/cdn_img','PracticaController@cdnImg');
